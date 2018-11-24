@@ -89,7 +89,6 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE name = ?
       LIMIT = ?
     SQL
 
