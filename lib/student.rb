@@ -60,11 +60,11 @@ class Student
   end
 end
 
-  def self.all_students_in_grade_9
+  def self.all_students_in_grade_9(grade)
     sql = <<-SQL
       SELECT *
       FROM students
-      WHERE grade = 9
+      WHERE grade = ?
     SQL
 
     DB[:conn].execute(sql, grade).map do |row|
